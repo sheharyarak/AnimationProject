@@ -1,10 +1,10 @@
 #include "Bug.h"
 #include "alpha.h"
 #include <iostream>
-#include <threads>
+// #include <threads>
 
 //NORMAL MAIN
-/* int		main()
+int		main()
 {
 	std::string word = "./Letters/";
 	std::cout << "Enter a word [PSA: Words don't have numbers]: ";
@@ -18,14 +18,13 @@
 	for(int i = 0; i < word.length(); i++)
 	{
 		barry->teleport(WIDTH*i,50);
-		std::cout << "drawing "<<word[i]<<"."<<std::endl;
 		draw(barry, word[i]);
-		std::cout << "finished drawing "<<word[i]<<"."<<std::endl;
 	}
 	std::cout << word <<".gif has been made." <<std::endl;
 	a->close();
 	system("wsl animate result.gif");
-} */
+}
+/* 
 //THREADED MAIN
 int		main()
 {
@@ -49,4 +48,4 @@ int		main()
 	std::cout << word <<".gif has been made." <<std::endl;
 	a->close();
 	system("wsl animate result.gif");
-}
+} */
