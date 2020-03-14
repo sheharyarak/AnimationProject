@@ -4,7 +4,8 @@
 #include <chrono>
 #include <future>
 #include <vector>
-// #include <threads>
+#include <thread>
+#include "Timer.h"
 
 static std::vector<std::future<void>>future_v;
 
@@ -36,6 +37,7 @@ static std::vector<std::future<void>>future_v;
 //THREADED MAIN
 int		main()
 {
+	Timer t("Total time");
 	std::string word = "./Letters/";
 	std::cout << "Enter a word [PSA: Words don't have numbers]: ";
 	std::cin >>	word;
@@ -48,11 +50,10 @@ int		main()
 	for(int i = 0; i < word.length(); i++)
 	{
 		barry->teleport(WIDTH*i,50);
-		std::cout << "drawing "<<word[i]<<"."<<std::endl;
 		future_v.push_back(std::async(std::launch::async, draw, barry, word[i]));
-		std::cout << "finished drawing "<<word[i]<<"."<<std::endl;
 	}
-	std::cout << word <<".gif has been made." <<std::endl;
+	//~ std::cout << word <<".gif has been made." <<std::endl;
 	a->close();
-	system("wsl animate result.gif");
+	//~ std::string command = "animate " + word + ".gif";
+	//~ system(command.c_str());
 }

@@ -48,7 +48,7 @@ void Animation::frame()
       jo_write_mpeg(_fp, _frame.data(), _width, _height, 60);
    }
    fill(_frame.begin(), _frame.end(), 255); // fill with white
-   std::cout<<".";
+   //~ std::cout<<".";
 }
 
 void Animation::close()

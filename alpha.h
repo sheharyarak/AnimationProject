@@ -1,7 +1,7 @@
 #ifndef ALPHA_H
 #define ALPHA_H
 
-#include "bug.h"
+#include "Bug.h"
 #include <cmath>
 #include <iostream>
 

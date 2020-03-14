@@ -1,4 +1,5 @@
 #include "alpha.h"
+#include "Timer.h"
 
 void	toUpper(std::string &str)
 {
@@ -11,9 +12,11 @@ void	toUpper(std::string &str)
 
 void	draw(Bug* b, char c)
 {
-	std::cout << "Drawing " << c << std::endl;
+	std::string t_name = "" + c;
+	Timer t(t_name);
+	//std::cout << "Drawing " << c << std::endl;
 	DRAW[c-'A'](b);
-	std::cout << "Finished Drawing " << c << std::endl;
+	//std::cout << "Finished Drawing " << c << std::endl;
 }
 void	draw_A(Bug*	b)
 {
