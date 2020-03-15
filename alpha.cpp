@@ -12,8 +12,9 @@ void	toUpper(std::string &str)
 
 void	draw(Bug* b, char c)
 {
-	std::string t_name = "" + c;
-	Timer t(t_name);
+	//~ std::string t_name = "[Timer] C" + c;
+	//~ t_name[t_name.length()-1] = c;
+	//~ Timer t(t_name);
 	//std::cout << "Drawing " << c << std::endl;
 	DRAW[c-'A'](b);
 	//std::cout << "Finished Drawing " << c << std::endl;
