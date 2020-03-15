@@ -2,9 +2,9 @@
 #include "alpha.h"
 #include <iostream>
 #include <chrono>
-#include <future>
+// #include <future>
 #include <vector>
-#include <thread>
+// #include <thread>
 #include "Timer.h"
 
 //~ static std::vector<std::future<void>>future_v;
@@ -21,18 +21,20 @@ int		main()
 	Bug *barry = new Bug(0,50, a);
 	barry->set_p(p);
 	barry->set_v(5);
-	auto start = std::chrono::high_resolution_clock::now();
+	// auto start = std::chrono::high_resolution_clock::now();
+	Timer t("Total time");
 	for(int i = 0; i < word.length(); i++)
 	{
 		barry->teleport(WIDTH*i,50);
 		draw(barry, word[i]);
 	}
 	a->close();
-	auto end = std::chrono::high_resolution_clock::now();
-	std::chrono::duration<float> duration = end - start;
-	std::cout << word <<".gif has been made in "<<duration.count()<<"s." <<std::endl;
-	std::string command = "animate " + word + ".gif"; 
-	system(command.c_str());
+	// auto end = std::chrono::high_resolution_clock::now();
+	// std::chrono::duration<float> duration = end - start;
+	// std::cout << word <<".gif has been made in "<<duration.count()<<"s." <<std::endl;
+	std::cout << word <<".gif has been made." <<std::endl;
+	// std::string command = "animate " + word + ".gif"; 
+	// system(command.c_str());
 }
 
 //~ //THREADED MAIN

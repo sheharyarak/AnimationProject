@@ -1,6 +1,9 @@
+#ifndef TIMER_H
+#define TIMER_H
+
 #include <chrono>
 #include <iostream>
-#include <thread>
+// #include <thread>
 
 struct Timer{
 	std::string name;
@@ -17,3 +20,5 @@ struct Timer{
 		std::cout << name << " : " << duration.count() << "s." <<std::endl;
 	}
 };
+
+#endif
