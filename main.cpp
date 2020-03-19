@@ -17,7 +17,7 @@ int		main()
 	std::cin >>	word;
 	toUpper(word);
 	Picture p("duck.png");
-	Animation *a = new Animation(word+".gif", WIDTH*word.length()+PADDING, HEIGHT+PADDING);
+	Animation *a = new Animation(word+".gif", LENGTH*word.length()+PADDING, LENGTH+PADDING);
 	Bug *barry = new Bug(0,50, a);
 	barry->set_p(p);
 	barry->set_v(5);
@@ -25,7 +25,7 @@ int		main()
 	Timer t("Total time");
 	for(int i = 0; i < word.length(); i++)
 	{
-		barry->teleport(WIDTH*i,50);
+		barry->teleport(LENGTH*i,50);
 		draw(barry, word[i]);
 	}
 	a->close();
@@ -46,13 +46,13 @@ int		main()
 	//~ std::cin >>	word;
 	//~ toUpper(word);
 	//~ Picture p("duck.png");
-	//~ Animation *a = new Animation(word+".gif", WIDTH*word.length()+PADDING, HEIGHT+PADDING);
+	//~ Animation *a = new Animation(word+".gif", LENGTH*word.length()+PADDING, LENGTH+PADDING);
 	//~ Bug *barry = new Bug(0,50, a);
 	//~ barry->set_p(p);
 	//~ barry->set_v(5);
 	//~ for(int i = 0; i < word.length(); i++)
 	//~ {
-		//~ barry->teleport(WIDTH*i,50);
+		//~ barry->teleport(LENGTH*i,50);
 		//~ future_v.push_back(std::async(std::launch::async, draw, barry, word[i]));
 	//~ }
 	//~ std::cout << word <<".gif has been made." <<std::endl;

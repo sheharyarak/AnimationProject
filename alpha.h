@@ -6,8 +6,7 @@
 #include <iostream>
 
 const unsigned int PADDING = 100;
-const unsigned int WIDTH = 300;
-const unsigned int HEIGHT = 300;
+const unsigned int LENGTH = 100;
 const double PI = 3.1415926535897;
 const	std::string ALPHABETS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 typedef	void (*DrawFunction)(Bug* b);
